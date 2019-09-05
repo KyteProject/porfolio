@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { textColor } from '../../../context/theme';
+
+// const { mode } = useContext(ThemeContext);
 
 export const Wrapper = styled.div`
 	padding-bottom: 4rem;
@@ -30,7 +33,7 @@ export const Details = styled.div`
 	h1 {
 		margin-bottom: 2rem;
 		font-size: 36pt;
-		color: #212121;
+		color: ${textColor};
 
 		@media (max-width: 680px) {
 			font-size: 30pt;

@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 import { Header } from 'Theme';
 import { Container, Button } from 'Common';
 import { IoMdMoon as Moon, IoMdSunny as Sun } from 'react-icons/io';
+
 import dev from 'Static/illustrations/dev.svg';
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
+
 import ThemeContext from './../../../context/ThemeContext';
 import LangContext from './../../../context/LangContext';
 
