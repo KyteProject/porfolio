@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
-import { langData } from './langData';
+import { langData } from '../../data/langData';
 
 const LangContext = React.createContext({
 	lang: '',

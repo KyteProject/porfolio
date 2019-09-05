@@ -10,20 +10,18 @@ import LangContext from './../../../context/LangContext';
 
 const Intro = () => {
 	const { mode, toggle } = useContext(ThemeContext);
-	const { lang, langToggle } = useContext(LangContext);
-
-	console.log(mode);
-	console.log(lang);
+	const { lang, currentLangData, langToggle } = useContext(LangContext);
+	const { title, subTitle, button, imageAlt } = currentLangData.intro;
 
 	return (
 		<Wrapper>
 			<Header />
 			<IntroWrapper as={Container}>
 				<Details>
-					<h1>Welcome / Welkom!</h1>
-					<h4>I’m Dan and I’m a Problem Solver, Developer, and Designer!</h4>
+					<h1>{title}</h1>
+					<h4>{subTitle}</h4>
 					<Button as={AnchorLink} href="#contact">
-						Hire me
+						{button}
 					</Button>
 					<Button onClick={() => toggle()}>
 						{mode === 'dark' ? <Moon className="icon active" /> : <Sun className="icon active" />}
@@ -31,7 +29,7 @@ const Intro = () => {
 					<Button onClick={() => langToggle()}>{lang === 'en' ? 'EN' : 'NL'}</Button>
 				</Details>
 				<Thumbnail>
-					<img src={dev} alt="I’m Dan and I’m a Problem Solver, Developer, and Designer!" />
+					<img src={dev} alt={imageAlt} />
 				</Thumbnail>
 			</IntroWrapper>
 		</Wrapper>
